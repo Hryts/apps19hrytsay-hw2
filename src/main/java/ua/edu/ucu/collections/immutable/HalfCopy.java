@@ -1,51 +1,20 @@
 package ua.edu.ucu.collections.immutable;
 
-public class HalfCopy {
+class HalfCopy {
     private ImmutableLinkedList halfCopy;
-    private Node uncopied;
-    private Node copied;
-
-    public void setCopied(Node copied) {
-        this.copied = copied;
-    }
-
-    public Node getUncopied() {
-        return uncopied;
-    }
-
-    public Node getCopied() {
-        return copied;
-    }
-
-    public void setLastCopied(Node lastCopied) {
-        this.lastCopied = lastCopied;
-    }
-
-    Node getLastCopied() {
-        return lastCopied;
-    }
-
     private Node lastCopied;
+    private Node unCopied;
 
-    HalfCopy(ImmutableLinkedList halfCopy, Node uncopied, Node copied) {
+
+    HalfCopy(ImmutableLinkedList halfCopy, Node unCopied, Node lastCopied) {
         this.halfCopy = halfCopy;
-        this.uncopied = uncopied;
-        this.copied = copied;
+        this.lastCopied = lastCopied;
+        this.unCopied = unCopied;
     }
 
-    public void setHalfCopy(ImmutableLinkedList halfCopy) {
-        this.halfCopy = halfCopy;
-    }
+    ImmutableLinkedList getHalfCopy() {return halfCopy;}
 
-    public void setUnCopied(Node uncopied) {
-        this.uncopied = uncopied;
-    }
+    Node getLastCopied() {return lastCopied;}
 
-    ImmutableLinkedList getHalfCopy() {
-        return halfCopy;
-    }
-
-    Node getUnCopied() {
-        return uncopied;
-    }
+    Node getUnCopied() {return unCopied;}
 }
