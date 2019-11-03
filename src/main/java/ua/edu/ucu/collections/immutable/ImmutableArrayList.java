@@ -38,7 +38,7 @@ public class ImmutableArrayList implements ImmutableList {
         }
     }
 
-    public Object[] getValues() {return values;}
+    private Object[] getValues() {return values;}
 
     private int getSize() {return size;}
 
