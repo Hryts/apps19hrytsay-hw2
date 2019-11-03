@@ -200,4 +200,6 @@ public class ImmutableLinkedList implements ImmutableList{
     Node getRoot() {
         return root;
     }
+
+    public Node getRootOut() {return root.copy();}
 }
