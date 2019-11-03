@@ -4,7 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ImmutableArrayListTest {
-    private final int capacityTest = 5;
     private final Object[] valuesTest = {1, 2, 3, 4, 5};
     private final int bigIndex = 1000;
     private final int normIndex = 3;
@@ -25,7 +24,6 @@ public class ImmutableArrayListTest {
         ImmutableList immArr = new ImmutableArrayList(arr);
         ImmutableList finalArr = immArr.add("test");
         Object[] expArr = new Object[] {1, 2, 3, 4, 5, "test"};
-        System.out.println(finalArr.toArray());
         assertArrayEquals(finalArr.toArray(), expArr);
     }
 
