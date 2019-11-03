@@ -38,11 +38,11 @@ public class ImmutableArrayList implements ImmutableList {
         }
     }
 
-    private Object[] getValues() {return values;}
+    private Object[] getValues() { return values; }
 
-    private int getSize() {return size;}
+    private int getSize() { return size; }
 
-    private void setSize(int size) {this.size = size;}
+    private void setSize(int size) {this.size = size; }
 
     @Override
     public ImmutableList add(Object e) {
@@ -125,13 +125,13 @@ public class ImmutableArrayList implements ImmutableList {
     }
 
     @Override
-    public int size() {return size;}
+    public int size() { return size; }
 
     @Override
-    public ImmutableList clear() {return new ImmutableArrayList();}
+    public ImmutableList clear() { return new ImmutableArrayList(); }
 
     @Override
-    public boolean isEmpty() {return size == 0;}
+    public boolean isEmpty() { return size == 0; }
 
     @Override
     public Object[] toArray() {

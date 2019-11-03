@@ -7,7 +7,7 @@ public class ImmutableLinkedList implements ImmutableList{
 
     ImmutableLinkedList() {}
 
-    private ImmutableLinkedList(Node root) {this.root = root;}
+    private ImmutableLinkedList(Node root) {this.root = root; }
 
     private FullCopy copy() {
         Node currentCopy = root.copy();
@@ -173,10 +173,10 @@ public class ImmutableLinkedList implements ImmutableList{
     }
 
     @Override
-    public ImmutableList clear() {return new ImmutableLinkedList();}
+    public ImmutableList clear() { return new ImmutableLinkedList(); }
 
     @Override
-    public boolean isEmpty() {return size() == 0;}
+    public boolean isEmpty() { return size() == 0; }
 
     @Override
     public Object[] toArray() {
@@ -201,5 +201,5 @@ public class ImmutableLinkedList implements ImmutableList{
         return root;
     }
 
-    public Node getRootOut() {return root.copy();}
+    public Node getRootOut() { return root.copy(); }
 }
